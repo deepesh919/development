@@ -11,9 +11,9 @@ import com.mobiliya.demo.model.Message;
 @RequestMapping(path = "/app")
 public class Controller {
 
-	@GetMapping(path = "/getmessage/{id}/{desc}", produces = "application/json")
-	public Message getEmployees(@PathVariable("id") String id, @PathVariable("desc") String messageDesc) {
-		return new Message(id, messageDesc);
+	@GetMapping(path = "/getmessage/", produces = "application/json")
+	public Message getEmployees() {
+		return new Message("123", "this is test API deployed in GCP kubernetes with global IP ");
 	}
 
 }
